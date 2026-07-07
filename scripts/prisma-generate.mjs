@@ -10,6 +10,7 @@ const executable = process.platform === 'win32' ? 'npx.cmd' : 'npx'
 const result = spawnSync(executable, ['prisma', 'generate', '--schema', schemaPath], {
   stdio: 'inherit',
   env: process.env,
+  shell: process.platform === 'win32',
 })
 
 if (result.error) {

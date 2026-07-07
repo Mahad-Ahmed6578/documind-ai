@@ -106,8 +106,8 @@ export async function upsertChunks(items: PineconeUpsertItem[]): Promise<void> {
   const batchSize = 100;
   for (let i = 0; i < items.length; i += batchSize) {
     const batch = items.slice(i, i + batchSize);
-    await namespace.upsert(
-      batch.map((item) => ({
+    await namespace.upsert({
+      records: batch.map((item) => ({
         id: item.id,
         values: item.embedding,
         metadata: {
@@ -117,7 +117,7 @@ export async function upsertChunks(items: PineconeUpsertItem[]): Promise<void> {
           chunkText: item.chunkText.slice(0, 50000), // Pinecone metadata limit
         },
       }))
-    );
+    });
   }
 }
 
@@ -129,7 +129,7 @@ export async function deleteDocumentChunks(documentId: string): Promise<void> {
   const index = getIndex();
   const namespace = index.namespace("_default");
   // Delete by metadata filter
-  await namespace.deleteMany({ documentId });
+  await namespace.deleteMany({ filter: { documentId: { $eq: documentId } } });
 }
 
 // ----------------------------------------------------------------

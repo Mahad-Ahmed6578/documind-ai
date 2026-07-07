@@ -187,7 +187,7 @@ async function embedTextsGemini(texts: string[]): Promise<number[][]> {
   const embeddings = new GoogleGenerativeAIEmbeddings({
     model: process.env.GEMINI_EMBED_MODEL ?? "text-embedding-004",
     apiKey,
-    taskType: "RETRIEVAL_DOCUMENT",
+    taskType: "RETRIEVAL_DOCUMENT" as any,
   });
   return embeddings.embedDocuments(texts);
 }
@@ -203,7 +203,7 @@ async function embedQueryGemini(query: string): Promise<number[]> {
   const embeddings = new GoogleGenerativeAIEmbeddings({
     model: process.env.GEMINI_EMBED_MODEL ?? "text-embedding-004",
     apiKey,
-    taskType: "RETRIEVAL_QUERY",
+    taskType: "RETRIEVAL_QUERY" as any,
   });
   return embeddings.embedQuery(query);
 }
