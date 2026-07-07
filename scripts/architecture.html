@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RAG System Architecture</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --text: #111827;
+    --text-sub: #4B5563;
+    --text-muted: #6B7280;
+    --bg: #FFFFFF;
+    --border: #E5E7EB;
+    --connector: #94A3B8;
+    --primary: #2D3748;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  #root {
+    width: fit-content;
+    min-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 56px;
+  }
+  .flow-title { font-size: 26px; font-weight: 700; text-align: center; margin-bottom: 8px; letter-spacing: -0.5px; }
+  .flow-subtitle { font-size: 14px; color: var(--text-sub); text-align: center; margin-bottom: 40px; max-width: 750px; margin-left: auto; margin-right: auto; }
+  .phase-group { background: #F8FAFC; border-radius: 14px; padding: 22px 26px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .phase-title { font-size: 16px; font-weight: 700; padding: 10px 16px; border-radius: 8px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .phase-title .phase-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(255,255,255,0.6); border-radius: 50%; font-size: 13px; font-weight: 700; }
+  .phase-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; padding-left: 4px; }
+  .phase-step { font-size: 13px; font-weight: 500; padding: 10px 14px; background: white; border-radius: 8px; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 4px; min-height: 64px; }
+  .phase-step .step-title { font-weight: 600; font-size: 13.5px; }
+  .phase-step .step-desc { font-size: 11.5px; font-weight: 400; color: var(--text-sub); line-height: 1.45; }
+  .phase-step code { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; background: #F1F5F9; padding: 1px 5px; border-radius: 3px; color: #334155; }
+  .phase-1 { background: #F0F4F8; }
+  .phase-1 .phase-title { background: #E2E8F0; color: #334155; border-left: 4px solid #64748B; }
+  .phase-2 { background: #E8EDF2; }
+  .phase-2 .phase-title { background: #DBEAFE; color: #1E3A5F; border-left: 4px solid #5B7A99; }
+  .phase-3 { background: #E0E7EF; }
+  .phase-3 .phase-title { background: #D0D9E4; color: #1E3050; border-left: 4px solid #4A6B8A; }
+  .phase-4 { background: #D8E0EA; }
+  .phase-4 .phase-title { background: #C7D2E0; color: #172540; border-left: 4px solid #3A5C7A; }
+  .phase-arrow { text-align: center; color: #94A3B8; font-size: 22px; margin: 10px 0; line-height: 1; }
+  .flow-legend { display: flex; gap: 24px; justify-content: center; margin-top: 36px; padding: 14px 24px; background: #F9FAFB; border-radius: 8px; border: 1px solid #E5E7EB; font-size: 12px; color: #4B5563; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; border: 2px solid; }
+  .provider-callout { margin-top: 28px; padding: 20px 24px; background: linear-gradient(135deg, #F0F4F8 0%, #E8EDF2 100%); border: 1px solid #C7D2E0; border-radius: 10px; border-left: 4px solid #3A5C7A; }
+  .provider-callout-title { font-size: 15px; font-weight: 700; color: #172540; margin-bottom: 10px; }
+  .provider-callout p { font-size: 13px; color: #1E3050; line-height: 1.6; margin-bottom: 8px; }
+  .provider-callout code { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; background: #DBEAFE; padding: 2px 6px; border-radius: 3px; color: #1E3A5F; }
+  .tech-stack { margin-top: 28px; padding: 18px 24px; background: #FAFBFC; border: 1px solid #E5E7EB; border-radius: 10px; }
+  .tech-stack-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .tech-stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+  .tech-item { display: flex; flex-direction: column; gap: 2px; padding: 8px 12px; background: white; border-radius: 6px; border: 1px solid #E5E7EB; }
+  .tech-item-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; }
+  .tech-item-value { font-size: 13px; font-weight: 600; color: var(--text); }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="flow-title">RAG Document Q&amp;A — System Architecture v3</div>
+  <div class="flow-subtitle">
+    End-to-end pipeline with 3 swappable embedding providers (TF-IDF / GLM-4 Semantic / Gemini),
+    2 vector stores (in-memory / Pinecone), document-scoped queries, comparison boost,
+    and localStorage message persistence
+  </div>
+
+  <div class="phase-group phase-1">
+    <div class="phase-title"><span class="phase-num">1</span>Document Upload (User Action)</div>
+    <div class="phase-steps">
+      <div class="phase-step"><span class="step-title">User selects file</span><span class="step-desc">PDF, DOCX, TXT, or MD (max 25 MB, up to 50 docs)</span></div>
+      <div class="phase-step"><span class="step-title">POST /api/documents</span><span class="step-desc">FormData upload → validates MIME + size + count</span></div>
+      <div class="phase-step"><span class="step-title">Create Document row</span><span class="step-desc">Prisma inserts row with <code>status = "processing"</code></span></div>
+    </div>
+  </div>
+
+  <div class="phase-arrow">↓</div>
+
+  <div class="phase-group phase-2">
+    <div class="phase-title"><span class="phase-num">2</span>Ingestion Pipeline (Background, &lt; 3s for 10-page PDF)</div>
+    <div class="phase-steps">
+      <div class="phase-step"><span class="step-title">Parse document</span><span class="step-desc"><code>document-parser.ts</code> — pdf-parse / mammoth / UTF-8</span></div>
+      <div class="phase-step"><span class="step-title">Chunk text</span><span class="step-desc"><code>text-splitter.ts</code> — RecursiveCharacterTextSplitter (1500 chars, 300 overlap) + force-split fallback</span></div>
+      <div class="phase-step"><span class="step-title">Embed chunks <em style="font-weight:400;color:#5B7A99;">(3 options)</em></span><span class="step-desc"><code>embeddings.ts</code> dispatches to <strong>TF-IDF</strong> (256d), <strong>GLM-4 Semantic</strong> (512d), or <strong>Gemini</strong> (768d)</span></div>
+      <div class="phase-step"><span class="step-title">Persist to Prisma + Vector DB <em style="font-weight:400;color:#5B7A99;">(2 options)</em></span><span class="step-desc">Prisma (always) + <strong>in-memory</strong> or <strong>Pinecone</strong> (if VECTOR_STORE_PROVIDER=pinecone); status → "ready"</span></div>
+    </div>
+  </div>
+
+  <div class="phase-arrow">↓</div>
+
+  <div class="phase-group phase-3">
+    <div class="phase-title"><span class="phase-num">3</span>Query &amp; Retrieval (~50ms, with comparison boost)</div>
+    <div class="phase-steps">
+      <div class="phase-step"><span class="step-title">POST /api/query</span><span class="step-desc">Frontend sends <code>{ question, sessionId, topK, documentIds? }</code></span></div>
+      <div class="phase-step"><span class="step-title">Embed question</span><span class="step-desc"><code>vector-store.ts</code> → same embedder as Phase 2</span></div>
+      <div class="phase-step"><span class="step-title">Vector search</span><span class="step-desc">Cosine similarity via <strong>in-memory</strong> or <strong>Pinecone</strong> → top K (default 6)</span></div>
+      <div class="phase-step"><span class="step-title">Fallback + comparison boost</span><span class="step-desc">If 0 chunks: fetch first N. If "compare" + 2+ docs: fetch from ALL selected docs</span></div>
+    </div>
+  </div>
+
+  <div class="phase-arrow">↓</div>
+
+  <div class="phase-group phase-4">
+    <div class="phase-title"><span class="phase-num">4</span>Generation &amp; Response (~700ms, with retry)</div>
+    <div class="phase-steps">
+      <div class="phase-step"><span class="step-title">Build RAG prompt</span><span class="step-desc"><code>rag-pipeline.ts</code> injects chunks + scope hint (single/multi/all docs)</span></div>
+      <div class="phase-step"><span class="step-title">Call LLM <em style="font-weight:400;color:#3A5C7A;">(switchable + retry)</em></span><span class="step-desc"><code>llm.ts</code> → <strong>Z.ai GLM-4</strong> (with 429 retry) or <strong>Google Gemini</strong></span></div>
+      <div class="phase-step"><span class="step-title">Render markdown</span><span class="step-desc"><code>MarkdownRenderer</code> — headings, bold, lists, tables, LaTeX math (KaTeX)</span></div>
+      <div class="phase-step"><span class="step-title">Persist chat (localStorage)</span><span class="step-desc">Messages saved to localStorage → survive page refresh</span></div>
+    </div>
+  </div>
+
+  <div class="flow-legend">
+    <div class="legend-item"><div class="legend-dot" style="border-color:#64748B; background:#F0F4F8;"></div>User-facing step</div>
+    <div class="legend-item"><div class="legend-dot" style="border-color:#5B7A99; background:#E8EDF2;"></div>Ingestion</div>
+    <div class="legend-item"><div class="legend-dot" style="border-color:#4A6B8A; background:#E0E7EF;"></div>Retrieval</div>
+    <div class="legend-item"><div class="legend-dot" style="border-color:#3A5C7A; background:#D8E0EA;"></div>Generation</div>
+  </div>
+
+  <div class="provider-callout">
+    <div class="provider-callout-title">🔀 Full Swappability — 3 Embedders × 2 Vector Stores × 2 LLMs</div>
+    <p>Edit <code>.env</code> to switch any layer without code changes:</p>
+    <p style="font-family: 'JetBrains Mono', monospace; background: white; padding: 10px 14px; border-radius: 6px; font-size: 12px; margin-top: 8px;">
+      # LLM (chat responses)<br>
+      LLM_PROVIDER=zai&nbsp;&nbsp;&nbsp;&nbsp;# or "gemini"<br><br>
+      # Embeddings (text → vectors)<br>
+      EMBED_PROVIDER=glm4&nbsp;&nbsp;&nbsp;&nbsp;# "tfidf" (256d), "glm4" (512d), or "gemini" (768d)<br><br>
+      # Vector Store (where to store/search)<br>
+      VECTOR_STORE_PROVIDER=memory&nbsp;&nbsp;&nbsp;&nbsp;# or "pinecone"
+    </p>
+    <p style="margin-top: 10px;">
+      12 possible combinations — all work without code changes. Defaults: Z.ai GLM-4 + GLM-4 Semantic + in-memory (zero API keys needed).
+    </p>
+  </div>
+
+  <div class="tech-stack">
+    <div class="tech-stack-title">Technology Stack</div>
+    <div class="tech-stack-grid">
+      <div class="tech-item"><span class="tech-item-label">Frontend</span><span class="tech-item-value">Next.js 16 · React 19 · TypeScript</span></div>
+      <div class="tech-item"><span class="tech-item-label">UI</span><span class="tech-item-value">shadcn/ui · Tailwind CSS 4 · Responsive</span></div>
+      <div class="tech-item"><span class="tech-item-label">Markdown</span><span class="tech-item-value">react-markdown · remark-gfm · KaTeX</span></div>
+      <div class="tech-item"><span class="tech-item-label">State</span><span class="tech-item-value">Zustand (shared) · localStorage</span></div>
+      <div class="tech-item"><span class="tech-item-label">Backend</span><span class="tech-item-value">Next.js API Routes (Node.js)</span></div>
+      <div class="tech-item"><span class="tech-item-label">LLM (default)</span><span class="tech-item-value">Z.ai GLM-4 + retry on 429</span></div>
+      <div class="tech-item"><span class="tech-item-label">LLM (alt)</span><span class="tech-item-value">Google Gemini 2.0 Flash</span></div>
+      <div class="tech-item"><span class="tech-item-label">Embeddings 1</span><span class="tech-item-value">TF-IDF (256-dim, local)</span></div>
+      <div class="tech-item"><span class="tech-item-label">Embeddings 2</span><span class="tech-item-value">GLM-4 Semantic (512-dim, local)</span></div>
+      <div class="tech-item"><span class="tech-item-label">Embeddings 3</span><span class="tech-item-value">Gemini text-embedding-004 (768-dim)</span></div>
+      <div class="tech-item"><span class="tech-item-label">Vector DB (default)</span><span class="tech-item-value">In-memory (Prisma)</span></div>
+      <div class="tech-item"><span class="tech-item-label">Vector DB (prod)</span><span class="tech-item-value">Pinecone (managed)</span></div>
+      <div class="tech-item"><span class="tech-item-label">Database</span><span class="tech-item-value">Prisma + SQLite/Postgres</span></div>
+      <div class="tech-item"><span class="tech-item-label">Deployment</span><span class="tech-item-value">Vercel · Local via Bun</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

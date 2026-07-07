@@ -1,0 +1,77 @@
+// ============================================================
+// RAG Document Q&A System — Prisma Schema
+// ============================================================
+// DUAL DATABASE SUPPORT:
+//   - SQLite     (local dev)        — provider="sqlite"
+//   - PostgreSQL (Vercel prod)      — provider="postgresql"
+//
+// To switch: edit the `provider` field below AND set DATABASE_URL.
+// We keep provider="sqlite" as the default so local dev "just works"
+// out of the box. For Vercel, switch to postgresql and set:
+//   DATABASE_URL=postgres://user:pass@host:5432/dbname
+//
+// The schema is intentionally minimal and uses only Prisma types
+// that work on BOTH providers (no @db.Text — that's Postgres-only).
+// ============================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // Change to "postgresql" for production. Set DATABASE_URL accordingly.
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Stores metadata for every uploaded document
+model Document {
+  id         String   @id @default(cuid())
+  filename   String
+  fileSize   Int
+  mimeType   String
+  status     String   @default("processing") // processing | ready | error
+  chunkCount Int      @default(0)
+  errorMsg   String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  chunks     DocumentChunk[]
+
+  @@index([status])
+  @@index([filename])
+}
+
+// Stores each text chunk + its embedding (JSON-serialized Float32 array)
+// We store embeddings as String (JSON) because SQLite has no array type
+// and we want one schema that works on both SQLite and Postgres.
+model DocumentChunk {
+  id         String   @id @default(cuid())
+  documentId String
+  content    String
+  embedding  String   // JSON-serialized array, e.g. "[0.012, -0.45, ...]"
+  chunkIndex Int
+  tokenCount Int      @default(0)
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId])
+}
+
+// Stores conversation history per session (optional, used for chat recall)
+model ChatMessage {
+  id        String   @id @default(cuid())
+  sessionId String
+  role      String   // user | assistant
+  content   String
+  sources   String?  // JSON-serialized source chunk metadata
+  createdAt DateTime @default(now())
+
+  @@index([sessionId])
+}
+
+// Settings table — stores runtime-configurable options
+// (e.g. active LLM provider, max document count per session)
+model Setting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}

@@ -1,0 +1,46 @@
+# ─── Dependencies ──────────────────────
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+
+# ─── Next.js ───────────────────────────
+.next/
+out/
+build/
+dist/
+
+# ─── Database ──────────────────────────
+db/
+*.db
+*.db-journal
+*.sqlite
+
+# ─── Environment ───────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── Logs ──────────────────────────────
+*.log
+dev.log
+server.log
+
+# ─── Editor ────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── OS ────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Cache ─────────────────────────────
+.cache/
+.turbo/
+.eslintcache
+
+# ─── Z.ai scripts ──────────────────────
+.zscripts/

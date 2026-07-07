@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: rag-document-qa
+    env: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATABASE_URL
+        fromDatabase:
+          name: rag-document-qa-db
+          property: connectionString
+
+databases:
+  - name: rag-document-qa-db
+    plan: starter

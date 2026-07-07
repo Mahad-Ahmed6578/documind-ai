@@ -1,0 +1,37 @@
+# RAG System Test Document
+
+## About Acme Corp
+
+Acme Corp is a fictional technology company founded in 2019 by Jane Doe.
+The company is headquartered in Bangalore, India and has 250 employees as of 2025.
+Acme Corp's main product is "AcmeAI" — a SaaS platform for automated customer support.
+
+## Products
+
+1. AcmeAI Chatbot — a generative AI chatbot for customer service
+2. AcmeAnalytics — a real-time analytics dashboard
+3. AcmeVoice — a voice-to-text transcription service
+
+## Revenue
+
+In fiscal year 2024, Acme Corp reported $12.5 million in annual recurring revenue (ARR).
+This was a 40% increase from the previous year's $8.9 million ARR.
+The company is targeting $20 million ARR by end of 2025.
+
+## Funding
+
+Acme Corp raised a Series A of $5 million in 2021 led by Sequoia Capital.
+In 2023, they raised a Series B of $15 million led by Andreessen Horowitz.
+Total funding to date is $20 million.
+
+## Technology Stack
+
+The engineering team uses:
+- Frontend: React, TypeScript, Next.js
+- Backend: Python, FastAPI, PostgreSQL
+- Infrastructure: AWS, Kubernetes, Terraform
+- AI/ML: PyTorch, Hugging Face, OpenAI API
+
+## Contact
+
+For inquiries, email hello@acmecorp.example.com or call +91-80-1234-5678.

@@ -1,0 +1,61 @@
+// ============================================================
+// RAG Document Q&A System — Prisma Schema (Production)
+// ============================================================
+// Use this schema for Vercel/Render production deployments.
+// It matches the local schema, but targets PostgreSQL.
+// ============================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Document {
+  id         String   @id @default(cuid())
+  filename   String
+  fileSize   Int
+  mimeType   String
+  status     String   @default("processing")
+  chunkCount Int      @default(0)
+  errorMsg   String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  chunks     DocumentChunk[]
+
+  @@index([status])
+  @@index([filename])
+}
+
+model DocumentChunk {
+  id         String   @id @default(cuid())
+  documentId String
+  content    String
+  embedding  String
+  chunkIndex Int
+  tokenCount Int      @default(0)
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId])
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  sessionId String
+  role      String
+  content   String
+  sources   String?
+  createdAt DateTime @default(now())
+
+  @@index([sessionId])
+}
+
+model Setting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
