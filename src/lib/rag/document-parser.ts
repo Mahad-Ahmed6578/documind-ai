@@ -8,24 +8,26 @@
 //   - text/plain, text/markdown      → UTF-8 decode
 // ============================================================
 
-import { PDFParse } from "pdf-parse";
-import mammoth from "mammoth";
 import path from "node:path";
+import fs from "node:fs";
 
 // Configure pdf-parse worker to use the bundled pdfjs-dist worker.
 // Without this, Turbopack rewrites the import path and the worker can't be found.
 let workerConfigured = false;
-function ensureWorkerConfigured() {
+function ensureWorkerConfigured(pdfParseClass: any) {
   if (workerConfigured) return;
   try {
-    // Resolve the worker file path from pdfjs-dist
     const workerPath = path.resolve(
       process.cwd(),
       "node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs"
     );
-    PDFParse.setWorker(workerPath);
-  } catch {
+    const workerContent = fs.readFileSync(workerPath);
+    const workerBase64 = workerContent.toString("base64");
+    const workerDataUrl = `data:text/javascript;base64,${workerBase64}`;
+    pdfParseClass.setWorker(workerDataUrl);
+  } catch (err) {
     // If worker setup fails, pdfjs will fall back to fake worker (main thread)
+    console.warn("Setting up PDF worker failed, falling back:", err);
   }
   workerConfigured = true;
 }
@@ -93,7 +95,13 @@ export async function parseDocument(
 
 async function parsePdf(buffer: Buffer): Promise<ParseResult> {
   try {
-    ensureWorkerConfigured();
+    if (typeof globalThis.DOMMatrix === "undefined") {
+      globalThis.DOMMatrix = class DOMMatrix {
+        constructor() { }
+      } as any;
+    }
+    const { PDFParse } = await import("pdf-parse");
+    ensureWorkerConfigured(PDFParse);
     // pdf-parse v2 API: instantiate PDFParse with { data: Uint8Array }
     const parser = new PDFParse({ data: new Uint8Array(buffer) });
     const result = await parser.getText();
@@ -123,6 +131,7 @@ async function parsePdf(buffer: Buffer): Promise<ParseResult> {
 
 async function parseDocx(buffer: Buffer): Promise<ParseResult> {
   try {
+    const mammoth = await import("mammoth");
     const result = await mammoth.extractRawText({ buffer });
     const text = (result.value ?? "").trim();
     if (!text) {
@@ -141,3 +150,4 @@ async function parseDocx(buffer: Buffer): Promise<ParseResult> {
     );
   }
 }
+
