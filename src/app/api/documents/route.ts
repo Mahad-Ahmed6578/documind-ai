@@ -9,21 +9,24 @@ import { isSupportedMimeType } from "@/lib/rag/document-parser";
 import type { ApiResponse, DocumentMeta } from "@/lib/types";
 
 export const runtime = "nodejs";
-// File uploads can be large — give Vercel time to upload + parse + embed
-export const maxDuration = 60;
+// Increased for large file uploads — parse + embed can take a while
+export const maxDuration = 120;
 
 // ----------------------------------------------------------------
 // Tunable limits
 // ----------------------------------------------------------------
 const MAX_FILE_SIZE = 25 * 1024 * 1024;       // 25 MB per file
-const MAX_DOCUMENTS = 50;                      // 50 documents max in corpus
+const MAX_DOCUMENTS = 50;                      // 50 documents max per session
 
 // ----------------------------------------------------------------
-// GET /api/documents — list all uploaded documents
+// GET /api/documents — list documents for THIS session
 // ----------------------------------------------------------------
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    const sessionId = req.headers.get("x-session-id");
+
     const docs = await db.document.findMany({
+      where: sessionId ? { sessionId } : undefined,
       orderBy: { createdAt: "desc" },
     });
 
@@ -60,6 +63,7 @@ export async function GET() {
 // ----------------------------------------------------------------
 export async function POST(req: NextRequest) {
   try {
+    const sessionId = req.headers.get("x-session-id") || undefined;
     const formData = await req.formData();
     const file = formData.get("file");
 
@@ -94,8 +98,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Enforce max documents limit
-    const currentCount = await db.document.count();
+    // Enforce max documents limit (per session if available)
+    const currentCount = await db.document.count({
+      where: sessionId ? { sessionId } : undefined,
+    });
     if (currentCount >= MAX_DOCUMENTS) {
       return NextResponse.json<ApiResponse<never>>(
         {
@@ -109,6 +115,7 @@ export async function POST(req: NextRequest) {
     // Create the document row first (status = "processing")
     const doc = await db.document.create({
       data: {
+        sessionId: sessionId || null,
         filename: file.name,
         fileSize: file.size,
         mimeType: file.type || sniffMimeFromName(file.name),

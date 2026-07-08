@@ -1,0 +1,17 @@
+{
+  "services": {
+    "rag-document-qa": {
+      "root": ".",
+      "framework": "nextjs"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "type": "service",
+        "service": "rag-document-qa"
+      }
+    }
+  ]
+}

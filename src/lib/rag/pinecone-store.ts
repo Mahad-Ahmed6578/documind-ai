@@ -20,6 +20,7 @@
 
 import { Pinecone } from "@pinecone-database/pinecone";
 import type { SourceChunk } from "@/lib/types";
+import { getEmbeddingDim } from "./embeddings";
 
 const PINECONE_API_KEY = process.env.PINECONE_API_KEY ?? "";
 const PINECONE_INDEX = process.env.PINECONE_INDEX ?? "rag-document-qa";
@@ -47,10 +48,19 @@ export async function ensureIndex(dimension: number): Promise<void> {
   const indexName = PINECONE_INDEX;
 
   try {
-    // Try to describe the index — if it exists, we're good
-    await client.describeIndex(indexName);
-  } catch {
-    // Index doesn't exist — create it (serverless)
+    // Try to describe the index — verify dimension too
+    const indexDesc = await client.describeIndex(indexName);
+    if (indexDesc.dimension !== dimension) {
+      console.warn(
+        `Pinecone index dimension mismatch: expected ${dimension}, found ${indexDesc.dimension}. Recreating...`
+      );
+      await client.deleteIndex(indexName);
+      // Wait a bit for deletion to propagate
+      await new Promise((resolve) => setTimeout(resolve, 10000));
+      throw new Error(`Dimension mismatch: expected ${dimension}, recreating.`);
+    }
+  } catch (err) {
+    // Index doesn't exist or dimension mismatched — create it (serverless)
     try {
       await client.createIndex({
         name: indexName,
@@ -64,7 +74,7 @@ export async function ensureIndex(dimension: number): Promise<void> {
         },
       });
       // Wait a bit for the index to be ready
-      await new Promise((resolve) => setTimeout(resolve, 5000));
+      await new Promise((resolve) => setTimeout(resolve, 10000));
     } catch (createErr) {
       // If creation fails because it already exists, ignore
       const msg = createErr instanceof Error ? createErr.message : String(createErr);
@@ -203,7 +213,7 @@ export async function pineconeFallbackChunks(
 
   // Query with a zero vector — Pinecone will return arbitrary chunks
   // (this is a known limitation; for production, use a separate "fetch by metadata" API)
-  const dim = 256; // doesn't matter for fallback — we just want any chunks
+  const dim = getEmbeddingDim();
   const zeroVector = new Array(dim).fill(0);
 
   const queryResult = await namespace.query({

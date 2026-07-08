@@ -1,0 +1,462 @@
+{
+  "accountId": "team_upMXWy2C0wxyJBDrPfP2lcEW",
+  "alias": [],
+  "speedInsights": {
+    "id": "WLHj5m2SF3sA4dP2JqtG58VSicH",
+    "hasData": false
+  },
+  "autoExposeSystemEnvs": true,
+  "autoAssignCustomDomains": true,
+  "autoAssignCustomDomainsUpdatedBy": "system",
+  "buildCommand": null,
+  "createdAt": 1783466290317,
+  "crons": {
+    "enabledAt": 1783467490189,
+    "disabledAt": null,
+    "updatedAt": 1783467769146,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "definitions": []
+  },
+  "deploymentExpiration": {
+    "expirationDays": 30,
+    "expirationDaysProduction": 30,
+    "expirationDaysCanceled": 30,
+    "expirationDaysErrored": 30,
+    "deploymentsToKeep": 10
+  },
+  "devCommand": null,
+  "directoryListing": false,
+  "env": [
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "Oif7Gpc4YgUvqJYt",
+      "key": "DATABASE_URL",
+      "createdAt": 1783466407178,
+      "updatedAt": 1783466407178,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "cM3VtInr6xkDlpWt",
+      "key": "DIRECT_URL",
+      "createdAt": 1783466432586,
+      "updatedAt": 1783466432586,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "F1VqkR9S4nGTqnfs",
+      "key": "LLM_PROVIDER",
+      "createdAt": 1783466449308,
+      "updatedAt": 1783466449308,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "Cv0UyhW66sx8hQQo",
+      "key": "OPENROUTER_API_KEY",
+      "createdAt": 1783466457905,
+      "updatedAt": 1783466457905,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "A2VErXq6BvQ087zb",
+      "key": "OPENROUTER_MODEL",
+      "createdAt": 1783466474127,
+      "updatedAt": 1783466474127,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "DVBpnNtH0fz9OTZr",
+      "key": "EMBED_PROVIDER",
+      "createdAt": 1783466506730,
+      "updatedAt": 1783466506730,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "HqrBGvraPGxqZMCg",
+      "key": "VECTOR_STORE_PROVIDER",
+      "createdAt": 1783466514189,
+      "updatedAt": 1783466514189,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "9biCPf43JvGT9QH1",
+      "key": "GEMINI_API_KEY",
+      "createdAt": 1783466523107,
+      "updatedAt": 1783466523107,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "ef7zQiUlfMneU3lo",
+      "key": "GOOGLE_API_KEY",
+      "createdAt": 1783466530526,
+      "updatedAt": 1783466530526,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "obN2ocPROuEMBfBM",
+      "key": "PINECONE_API_KEY",
+      "createdAt": 1783466541217,
+      "updatedAt": 1783466541217,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "bcmHUPV6ETZfjyhm",
+      "key": "PINECONE_INDEX",
+      "createdAt": 1783466556712,
+      "updatedAt": 1783466556712,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    },
+    {
+      "type": "sensitive",
+      "value": "",
+      "target": [
+        "production"
+      ],
+      "configurationId": null,
+      "id": "7rAYBGoxNAPX9Vef",
+      "key": "PINECONE_ENVIRONMENT",
+      "createdAt": 1783466575198,
+      "updatedAt": 1783466575198,
+      "createdBy": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "updatedBy": null
+    }
+  ],
+  "framework": "services",
+  "services": [
+    {
+      "serviceName": "rag-document-qa",
+      "framework": "nextjs"
+    }
+  ],
+  "gitForkProtection": true,
+  "gitLFS": false,
+  "id": "prj_PIds6zYAOOdOKCxlIdAAzZuKOFA8",
+  "installCommand": null,
+  "lastRollbackTarget": null,
+  "lastAliasRequest": null,
+  "name": "documind-ai",
+  "nodeVersion": "24.x",
+  "outputDirectory": null,
+  "productionDeploymentsFastLane": true,
+  "defaultResourceConfig": {
+    "fluid": true,
+    "functionDefaultRegions": [
+      "iad1"
+    ],
+    "functionDefaultTimeout": 300,
+    "functionDefaultMemoryType": "standard",
+    "functionZeroConfigFailover": false,
+    "elasticConcurrencyEnabled": false
+  },
+  "resourceConfig": {
+    "fluid": true,
+    "functionDefaultRegions": [
+      "iad1"
+    ]
+  },
+  "rootDirectory": null,
+  "serverlessFunctionRegion": "iad1",
+  "sourceFilesOutsideRootDirectory": true,
+  "ssoProtection": {
+    "deploymentType": "all_except_custom_domains"
+  },
+  "updatedAt": 1783467769146,
+  "live": false,
+  "enableExternalRewriteCaching": true,
+  "gitComments": {
+    "onCommit": false,
+    "onPullRequest": true
+  },
+  "gitProviderOptions": {
+    "createDeployments": "enabled"
+  },
+  "webAnalytics": {
+    "id": "J7nj9TBBPLPQczzuPPN7YnOef"
+  },
+  "oidcTokenConfig": {
+    "enabled": true,
+    "issuerMode": "team"
+  },
+  "hasDeployments": true,
+  "latestDeployments": [
+    {
+      "alias": [
+        "documind-ai-fawn.vercel.app",
+        "documind-ai-muhammad-mahads-projects.vercel.app",
+        "documind-ai-mahad-ahmed6578-muhammad-mahads-projects.vercel.app"
+      ],
+      "aliasAssigned": 1783467769063,
+      "aliasError": null,
+      "automaticAliases": [
+        "documind-ai-muhammad-mahads-projects.vercel.app",
+        "documind-ai-mahad-ahmed6578-muhammad-mahads-projects.vercel.app"
+      ],
+      "builds": [],
+      "createdAt": 1783467723772,
+      "createdIn": "sfo1",
+      "creator": {
+        "uid": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+        "email": "mahadahmed3164@gmail.com",
+        "username": "mahad-ahmed6578"
+      },
+      "deploymentHostname": "documind-mnaxou871-muhammad-mahads-projects",
+      "forced": false,
+      "id": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+      "meta": {
+        "githubCommitAuthorName": "Mahad-Ahmed6578",
+        "githubCommitAuthorEmail": "mahadahmed3164@gmail.com",
+        "githubCommitMessage": "fix: resolve TypeScript compilation issues and update Pinecone SDK method signatures",
+        "githubCommitOrg": "Mahad-Ahmed6578",
+        "githubCommitRef": "main",
+        "githubCommitRepo": "documind-ai",
+        "githubCommitSha": "8212fc6b06119ef817ffd169a5d7ccd9a124dfad",
+        "githubDeployment": "1",
+        "githubOrg": "Mahad-Ahmed6578",
+        "githubRepo": "documind-ai",
+        "gitDirty": "1",
+        "actor": "antigravity",
+        "lambdaRuntimeStats": "{\"nodejs\":2}",
+        "bundler": "turbopack"
+      },
+      "name": "documind-ai",
+      "plan": "hobby",
+      "private": true,
+      "readyState": "READY",
+      "readySubstate": "PROMOTED",
+      "target": "production",
+      "teamId": "team_upMXWy2C0wxyJBDrPfP2lcEW",
+      "type": "LAMBDAS",
+      "url": "documind-mnaxou871-muhammad-mahads-projects.vercel.app",
+      "userId": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "withCache": false,
+      "buildingAt": 1783467724690,
+      "readyAt": 1783467768861,
+      "previewCommentsEnabled": true,
+      "oidcTokenClaims": {
+        "sub": "owner:muhammad-mahads-projects:project:documind-ai:environment:production",
+        "iss": "https://oidc.vercel.com/muhammad-mahads-projects",
+        "scope": "owner:muhammad-mahads-projects:project:documind-ai:environment:production",
+        "aud": "https://vercel.com/muhammad-mahads-projects",
+        "owner": "muhammad-mahads-projects",
+        "owner_id": "team_upMXWy2C0wxyJBDrPfP2lcEW",
+        "project": "documind-ai",
+        "project_id": "prj_PIds6zYAOOdOKCxlIdAAzZuKOFA8",
+        "environment": "production",
+        "plan": "hobby"
+      }
+    },
+    {
+      "alias": [
+        "documind-ai-fawn.vercel.app",
+        "documind-ai-muhammad-mahads-projects.vercel.app",
+        "documind-ai-mahad-ahmed6578-muhammad-mahads-projects.vercel.app"
+      ],
+      "aliasAssigned": 1783467584843,
+      "aliasError": null,
+      "automaticAliases": [
+        "documind-ai-muhammad-mahads-projects.vercel.app",
+        "documind-ai-mahad-ahmed6578-muhammad-mahads-projects.vercel.app"
+      ],
+      "builds": [],
+      "createdAt": 1783467520900,
+      "createdIn": "sfo1",
+      "creator": {
+        "uid": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+        "email": "mahadahmed3164@gmail.com",
+        "username": "mahad-ahmed6578"
+      },
+      "deploymentHostname": "documind-oqo5cxnhx-muhammad-mahads-projects",
+      "forced": false,
+      "id": "dpl_78SnPrsomgH4yfHpBHNa5QKU12iL",
+      "meta": {
+        "githubCommitAuthorName": "Mahad-Ahmed6578",
+        "githubCommitAuthorEmail": "mahadahmed3164@gmail.com",
+        "githubCommitMessage": "fix: resolve TypeScript compilation issues and update Pinecone SDK method signatures",
+        "githubCommitOrg": "Mahad-Ahmed6578",
+        "githubCommitRef": "main",
+        "githubCommitRepo": "documind-ai",
+        "githubCommitSha": "8212fc6b06119ef817ffd169a5d7ccd9a124dfad",
+        "githubDeployment": "1",
+        "githubOrg": "Mahad-Ahmed6578",
+        "githubRepo": "documind-ai",
+        "gitDirty": "1",
+        "actor": "antigravity",
+        "lambdaRuntimeStats": "{\"nodejs\":2}",
+        "bundler": "turbopack"
+      },
+      "name": "documind-ai",
+      "plan": "hobby",
+      "private": true,
+      "readyState": "READY",
+      "readySubstate": "PROMOTED",
+      "target": "production",
+      "teamId": "team_upMXWy2C0wxyJBDrPfP2lcEW",
+      "type": "LAMBDAS",
+      "url": "documind-oqo5cxnhx-muhammad-mahads-projects.vercel.app",
+      "userId": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "withCache": false,
+      "buildingAt": 1783467521892,
+      "readyAt": 1783467584638,
+      "previewCommentsEnabled": true,
+      "oidcTokenClaims": {
+        "sub": "owner:muhammad-mahads-projects:project:documind-ai:environment:production",
+        "iss": "https://oidc.vercel.com/muhammad-mahads-projects",
+        "scope": "owner:muhammad-mahads-projects:project:documind-ai:environment:production",
+        "aud": "https://vercel.com/muhammad-mahads-projects",
+        "owner": "muhammad-mahads-projects",
+        "owner_id": "team_upMXWy2C0wxyJBDrPfP2lcEW",
+        "project": "documind-ai",
+        "project_id": "prj_PIds6zYAOOdOKCxlIdAAzZuKOFA8",
+        "environment": "production",
+        "plan": "hobby"
+      }
+    }
+  ],
+  "targets": {
+    "production": {
+      "alias": [
+        "documind-ai-fawn.vercel.app",
+        "documind-ai-muhammad-mahads-projects.vercel.app",
+        "documind-ai-mahad-ahmed6578-muhammad-mahads-projects.vercel.app"
+      ],
+      "aliasAssigned": 1783467769063,
+      "aliasError": null,
+      "automaticAliases": [
+        "documind-ai-muhammad-mahads-projects.vercel.app",
+        "documind-ai-mahad-ahmed6578-muhammad-mahads-projects.vercel.app"
+      ],
+      "builds": [],
+      "createdAt": 1783467723772,
+      "createdIn": "sfo1",
+      "creator": {
+        "uid": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+        "email": "mahadahmed3164@gmail.com",
+        "username": "mahad-ahmed6578"
+      },
+      "deploymentHostname": "documind-mnaxou871-muhammad-mahads-projects",
+      "forced": false,
+      "id": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+      "meta": {
+        "githubCommitAuthorName": "Mahad-Ahmed6578",
+        "githubCommitAuthorEmail": "mahadahmed3164@gmail.com",
+        "githubCommitMessage": "fix: resolve TypeScript compilation issues and update Pinecone SDK method signatures",
+        "githubCommitOrg": "Mahad-Ahmed6578",
+        "githubCommitRef": "main",
+        "githubCommitRepo": "documind-ai",
+        "githubCommitSha": "8212fc6b06119ef817ffd169a5d7ccd9a124dfad",
+        "githubDeployment": "1",
+        "githubOrg": "Mahad-Ahmed6578",
+        "githubRepo": "documind-ai",
+        "gitDirty": "1",
+        "actor": "antigravity",
+        "lambdaRuntimeStats": "{\"nodejs\":2}",
+        "bundler": "turbopack"
+      },
+      "name": "documind-ai",
+      "plan": "hobby",
+      "private": true,
+      "readyState": "READY",
+      "readySubstate": "PROMOTED",
+      "target": "production",
+      "teamId": "team_upMXWy2C0wxyJBDrPfP2lcEW",
+      "type": "LAMBDAS",
+      "url": "documind-mnaxou871-muhammad-mahads-projects.vercel.app",
+      "userId": "DLVnuLJ6jFVDAwA5Lxi6Oeqk",
+      "withCache": false,
+      "buildingAt": 1783467724690,
+      "readyAt": 1783467768861,
+      "previewCommentsEnabled": true,
+      "oidcTokenClaims": {
+        "sub": "owner:muhammad-mahads-projects:project:documind-ai:environment:production",
+        "iss": "https://oidc.vercel.com/muhammad-mahads-projects",
+        "scope": "owner:muhammad-mahads-projects:project:documind-ai:environment:production",
+        "aud": "https://vercel.com/muhammad-mahads-projects",
+        "owner": "muhammad-mahads-projects",
+        "owner_id": "team_upMXWy2C0wxyJBDrPfP2lcEW",
+        "project": "documind-ai",
+        "project_id": "prj_PIds6zYAOOdOKCxlIdAAzZuKOFA8",
+        "environment": "production",
+        "plan": "hobby"
+      }
+    }
+  },
+  "features": {
+    "webAnalytics": false
+  },
+  "protectedSourcemaps": true
+}

@@ -44,3 +44,6 @@ Thumbs.db
 
 # ─── Z.ai scripts ──────────────────────
 .zscripts/
+
+.vercel
+.env*

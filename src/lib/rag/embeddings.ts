@@ -20,13 +20,14 @@
 const TFIDF_DIM = 256;
 const GLM4_DIM = 512;
 
-export type EmbedProvider = "tfidf" | "glm4" | "gemini";
+export type EmbedProvider = "tfidf" | "glm4" | "gemini" | "openrouter";
 
 /** Get the configured embedder. Defaults to "tfidf" unless env says otherwise. */
 export function getEmbedProvider(): EmbedProvider {
   const env = (process.env.EMBED_PROVIDER ?? "tfidf").toLowerCase().trim();
   if (env === "glm4") return "glm4";
   if (env === "gemini") return "gemini";
+  if (env === "openrouter") return "openrouter";
   return "tfidf";
 }
 
@@ -35,6 +36,12 @@ export function getEmbeddingDim(): number {
   const provider = getEmbedProvider();
   if (provider === "glm4") return GLM4_DIM;
   if (provider === "gemini") return 768;
+  if (provider === "openrouter") {
+    const model = process.env.OPENROUTER_EMBED_MODEL ?? "openai/text-embedding-3-small";
+    if (model.includes("text-embedding-3-large")) return 3072;
+    if (model.includes("text-embedding-004")) return 768;
+    return 1536; // default for openai/text-embedding-3-small / ada-002
+  }
   return TFIDF_DIM;
 }
 
@@ -209,6 +216,40 @@ async function embedQueryGemini(query: string): Promise<number[]> {
 }
 
 // ============================================================
+// Provider 4: OpenRouter (cloud) — OpenAI-compatible embeddings
+// ============================================================
+
+async function embedTextsOpenRouter(texts: string[]): Promise<number[][]> {
+  const { default: OpenAI } = await import("openai");
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  if (!apiKey) {
+    throw new Error(
+      "OPENROUTER_API_KEY is not set. Required for OpenRouter embedding provider."
+    );
+  }
+  const client = new OpenAI({
+    apiKey,
+    baseURL: process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api/v1",
+    defaultHeaders: {
+      "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL ?? "https://documind-ai.vercel.app",
+      "X-Title": "DocuMind AI",
+    },
+  });
+  const model = process.env.OPENROUTER_EMBED_MODEL ?? "openai/text-embedding-3-small";
+
+  const response = await client.embeddings.create({
+    model,
+    input: texts,
+  });
+  return response.data.map((d) => d.embedding);
+}
+
+async function embedQueryOpenRouter(query: string): Promise<number[]> {
+  const vectors = await embedTextsOpenRouter([query]);
+  return vectors[0];
+}
+
+// ============================================================
 // Public API — dispatches to the configured provider
 // ============================================================
 
@@ -217,6 +258,9 @@ export async function embedTexts(texts: string[]): Promise<number[][]> {
   const provider = getEmbedProvider();
   if (provider === "gemini") {
     return embedTextsGemini(texts);
+  }
+  if (provider === "openrouter") {
+    return embedTextsOpenRouter(texts);
   }
   if (provider === "glm4") {
     return texts.map((t) => embedGlm4(t));
@@ -228,6 +272,9 @@ export async function embedQuery(query: string): Promise<number[]> {
   const provider = getEmbedProvider();
   if (provider === "gemini") {
     return embedQueryGemini(query);
+  }
+  if (provider === "openrouter") {
+    return embedQueryOpenRouter(query);
   }
   if (provider === "glm4") {
     return embedGlm4(query);

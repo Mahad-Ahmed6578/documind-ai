@@ -1,0 +1,1220 @@
+[
+  {
+    "created": 1783467801730,
+    "date": 1783467801730,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467801730079946407800000",
+    "text": "Build cache uploaded: 4.902s",
+    "type": "stdout",
+    "serial": "1783467801730079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467796829,
+    "date": 1783467796829,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467796829079946407800000",
+    "text": "Uploading build cache [273.59 MB]",
+    "type": "stdout",
+    "serial": "1783467796829079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467796828,
+    "date": 1783467796828,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467796828079946407800002",
+    "text": "Created build cache: 28s",
+    "type": "stdout",
+    "serial": "1783467796828079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467769147,
+    "date": 1783467769147,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467769147079946407800000",
+    "text": "Creating build cache...",
+    "type": "stdout",
+    "serial": "1783467769147079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467769036,
+    "date": 1783467769036,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467769036079946407800000",
+    "text": "Deployment completed",
+    "type": "stdout",
+    "serial": "1783467769036079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467755518,
+    "date": 1783467755518,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467755518079946407800000",
+    "text": "Deploying outputs...",
+    "type": "stdout",
+    "serial": "1783467755518079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467755304,
+    "date": 1783467755304,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467755304079946407800000",
+    "text": "Build Completed in /vercel/output [29s]",
+    "type": "stderr",
+    "serial": "1783467755304079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754748,
+    "date": 1783467754748,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754748079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467754748079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754747,
+    "date": 1783467754747,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754747079946407800004",
+    "text": "\u0192  (Dynamic)  server-rendered on demand",
+    "type": "stdout",
+    "serial": "1783467754747079946407800004",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754747,
+    "date": 1783467754747,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754747079946407800003",
+    "text": "\u25cb  (Static)   prerendered as static content",
+    "type": "stdout",
+    "serial": "1783467754747079946407800003",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754747,
+    "date": 1783467754747,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754747079946407800002",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467754747079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754747,
+    "date": 1783467754747,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754747079946407800001",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467754747079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754747,
+    "date": 1783467754747,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754747079946407800000",
+    "text": "\u2514 \u0192 /api/query",
+    "type": "stdout",
+    "serial": "1783467754747079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754746,
+    "date": 1783467754746,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754746079946407800004",
+    "text": "\u251c \u0192 /api/health",
+    "type": "stdout",
+    "serial": "1783467754746079946407800004",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754746,
+    "date": 1783467754746,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754746079946407800003",
+    "text": "\u251c \u0192 /api/documents/[id]",
+    "type": "stdout",
+    "serial": "1783467754746079946407800003",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754746,
+    "date": 1783467754746,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754746079946407800002",
+    "text": "\u251c \u0192 /api/documents",
+    "type": "stdout",
+    "serial": "1783467754746079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754746,
+    "date": 1783467754746,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754746079946407800001",
+    "text": "\u251c \u0192 /api",
+    "type": "stdout",
+    "serial": "1783467754746079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754746,
+    "date": 1783467754746,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754746079946407800000",
+    "text": "\u251c \u25cb /_not-found",
+    "type": "stdout",
+    "serial": "1783467754746079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754745,
+    "date": 1783467754745,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754745079946407800001",
+    "text": "\u250c \u25cb /",
+    "type": "stdout",
+    "serial": "1783467754745079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754745,
+    "date": 1783467754745,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754745079946407800000",
+    "text": "Route (app)",
+    "type": "stdout",
+    "serial": "1783467754745079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754743,
+    "date": 1783467754743,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754743079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467754743079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754666,
+    "date": 1783467754666,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754666079946407800000",
+    "text": "  Running onBuildComplete from Vercel",
+    "type": "stdout",
+    "serial": "1783467754666079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754644,
+    "date": 1783467754644,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754644079946407800000",
+    "text": "  Finalizing page optimization ...",
+    "type": "stdout",
+    "serial": "1783467754644079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754638,
+    "date": 1783467754638,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754638079946407800001",
+    "text": "\u2713 Generating static pages using 1 worker (7/7) in 232ms",
+    "type": "stdout",
+    "serial": "1783467754638079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754638,
+    "date": 1783467754638,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754638079946407800000",
+    "text": "  Generating static pages using 1 worker (5/7) \r",
+    "type": "stdout",
+    "serial": "1783467754638079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754461,
+    "date": 1783467754461,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754461079946407800000",
+    "text": "  Generating static pages using 1 worker (3/7) \r",
+    "type": "stdout",
+    "serial": "1783467754461079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754460,
+    "date": 1783467754460,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754460079946407800000",
+    "text": "  Generating static pages using 1 worker (1/7) \r",
+    "type": "stdout",
+    "serial": "1783467754460079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467754406,
+    "date": 1783467754406,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467754406079946407800000",
+    "text": "  Generating static pages using 1 worker (0/7) ...",
+    "type": "stdout",
+    "serial": "1783467754406079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467753754,
+    "date": 1783467753754,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467753754079946407800000",
+    "text": "  Collecting page data using 1 worker ...",
+    "type": "stdout",
+    "serial": "1783467753754079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467753748,
+    "date": 1783467753748,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467753748079946407800000",
+    "text": "  Finished TypeScript in 7.7s ...",
+    "type": "stdout",
+    "serial": "1783467753748079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467746063,
+    "date": 1783467746063,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467746063079946407800000",
+    "text": "  Running TypeScript ...",
+    "type": "stdout",
+    "serial": "1783467746063079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467746060,
+    "date": 1783467746060,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467746060079946407800000",
+    "text": "\u2713 Compiled successfully in 13.5s",
+    "type": "stdout",
+    "serial": "1783467746060079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467732228,
+    "date": 1783467732228,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467732228079946407800000",
+    "text": "  Creating an optimized production build ...",
+    "type": "stdout",
+    "serial": "1783467732228079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467732200,
+    "date": 1783467732200,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467732200079946407800001",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467732200079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467732200,
+    "date": 1783467732200,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467732200079946407800000",
+    "text": "  \u00b7 serverActions",
+    "type": "stdout",
+    "serial": "1783467732200079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467732199,
+    "date": 1783467732199,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467732199079946407800001",
+    "text": "- Experiments (use with caution):",
+    "type": "stdout",
+    "serial": "1783467732199079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467732199,
+    "date": 1783467732199,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467732199079946407800000",
+    "text": "\u25b2 Next.js 16.2.10 (Turbopack)",
+    "type": "stdout",
+    "serial": "1783467732199079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467732184,
+    "date": 1783467732184,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467732184079946407800000",
+    "text": "  Applying modifyConfig from Vercel",
+    "type": "stdout",
+    "serial": "1783467732184079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731498,
+    "date": 1783467731498,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731498079946407800004",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467731498079946407800004",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731498,
+    "date": 1783467731498,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731498079946407800003",
+    "text": "Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate",
+    "type": "stdout",
+    "serial": "1783467731498079946407800003",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731498,
+    "date": 1783467731498,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731498079946407800002",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467731498079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731498,
+    "date": 1783467731498,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731498079946407800001",
+    "text": "Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)",
+    "type": "stdout",
+    "serial": "1783467731498079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731498,
+    "date": 1783467731498,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731498079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467731498079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731497,
+    "date": 1783467731497,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731497079946407800002",
+    "text": "\u2714 Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 82ms",
+    "type": "stdout",
+    "serial": "1783467731497079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731497,
+    "date": 1783467731497,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731497079946407800001",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467731497079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731497,
+    "date": 1783467731497,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731497079946407800000",
+    "text": "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518",
+    "type": "stderr",
+    "serial": "1783467731497079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731496,
+    "date": 1783467731496,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731496079946407800004",
+    "text": "\u2502    npm i @prisma/client@latest                          \u2502",
+    "type": "stderr",
+    "serial": "1783467731496079946407800004",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731496,
+    "date": 1783467731496,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731496079946407800003",
+    "text": "\u2502    npm i --save-dev prisma@latest                       \u2502",
+    "type": "stderr",
+    "serial": "1783467731496079946407800003",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731496,
+    "date": 1783467731496,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731496079946407800002",
+    "text": "\u2502  Run the following to update                            \u2502",
+    "type": "stderr",
+    "serial": "1783467731496079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731496,
+    "date": 1783467731496,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731496079946407800001",
+    "text": "\u2502                                                         \u2502",
+    "type": "stderr",
+    "serial": "1783467731496079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731496,
+    "date": 1783467731496,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731496079946407800000",
+    "text": "\u2502  https://pris.ly/d/major-version-upgrade                \u2502",
+    "type": "stderr",
+    "serial": "1783467731496079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731495,
+    "date": 1783467731495,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731495079946407800002",
+    "text": "\u2502  This is a major update - please follow the guide at    \u2502",
+    "type": "stderr",
+    "serial": "1783467731495079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731495,
+    "date": 1783467731495,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731495079946407800001",
+    "text": "\u2502                                                         \u2502",
+    "type": "stderr",
+    "serial": "1783467731495079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731495,
+    "date": 1783467731495,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731495079946407800000",
+    "text": "\u2502  Update available 6.19.3 -> 7.8.0                       \u2502",
+    "type": "stderr",
+    "serial": "1783467731495079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731494,
+    "date": 1783467731494,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731494079946407800000",
+    "text": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510",
+    "type": "stderr",
+    "serial": "1783467731494079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467731326,
+    "date": 1783467731326,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467731326079946407800000",
+    "text": "Prisma schema loaded from prisma/schema.postgresql.prisma",
+    "type": "stdout",
+    "serial": "1783467731326079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730360,
+    "date": 1783467730360,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730360079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467730360079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730359,
+    "date": 1783467730359,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730359079946407800002",
+    "text": "> node scripts/prisma-generate.mjs && next build",
+    "type": "stdout",
+    "serial": "1783467730359079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730359,
+    "date": 1783467730359,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730359079946407800001",
+    "text": "> nextjs_tailwind_shadcn_ts@0.2.0 build",
+    "type": "stdout",
+    "serial": "1783467730359079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730359,
+    "date": 1783467730359,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730359079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467730359079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730264,
+    "date": 1783467730264,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730264079946407800000",
+    "text": "Running \"npm run build\"",
+    "type": "stdout",
+    "serial": "1783467730264079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730255,
+    "date": 1783467730255,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730255079946407800000",
+    "text": "Detected Next.js version: 16.2.10",
+    "type": "stdout",
+    "serial": "1783467730255079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730225,
+    "date": 1783467730225,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730225079946407800002",
+    "text": "  run `npm fund` for details",
+    "type": "stdout",
+    "serial": "1783467730225079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730225,
+    "date": 1783467730225,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730225079946407800001",
+    "text": "317 packages are looking for funding",
+    "type": "stdout",
+    "serial": "1783467730225079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730225,
+    "date": 1783467730225,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730225079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467730225079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730224,
+    "date": 1783467730224,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730224079946407800001",
+    "text": "up to date in 3s",
+    "type": "stdout",
+    "serial": "1783467730224079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730224,
+    "date": 1783467730224,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730224079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467730224079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730180,
+    "date": 1783467730180,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730180079946407800001",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467730180079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730180,
+    "date": 1783467730180,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730180079946407800000",
+    "text": "Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate",
+    "type": "stdout",
+    "serial": "1783467730180079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730179,
+    "date": 1783467730179,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730179079946407800004",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467730179079946407800004",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730179,
+    "date": 1783467730179,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730179079946407800003",
+    "text": "Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)",
+    "type": "stdout",
+    "serial": "1783467730179079946407800003",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730179,
+    "date": 1783467730179,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730179079946407800002",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467730179079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730179,
+    "date": 1783467730179,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730179079946407800001",
+    "text": "\u2714 Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 121ms",
+    "type": "stdout",
+    "serial": "1783467730179079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467730179,
+    "date": 1783467730179,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467730179079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467730179079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467729924,
+    "date": 1783467729924,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467729924079946407800000",
+    "text": "Prisma schema loaded from prisma/schema.postgresql.prisma",
+    "type": "stdout",
+    "serial": "1783467729924079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467728501,
+    "date": 1783467728501,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467728501079946407800002",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467728501079946407800002",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467728501,
+    "date": 1783467728501,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467728501079946407800001",
+    "text": "> node scripts/prisma-generate.mjs",
+    "type": "stdout",
+    "serial": "1783467728501079946407800001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467728501,
+    "date": 1783467728501,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467728501079946407800000",
+    "text": "> nextjs_tailwind_shadcn_ts@0.2.0 postinstall",
+    "type": "stdout",
+    "serial": "1783467728501079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467728500,
+    "date": 1783467728500,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467728500079946407800000",
+    "text": "",
+    "type": "stdout",
+    "serial": "1783467728500079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467726741,
+    "date": 1783467726741,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467726741079946407800000",
+    "text": "Installing dependencies...",
+    "type": "stdout",
+    "serial": "1783467726741079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467726327,
+    "date": 1783467726327,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467726327079946407800000",
+    "text": "Vercel CLI 54.19.0",
+    "type": "stderr",
+    "serial": "1783467726327079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467726304,
+    "date": 1783467726304,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467726304079946407800000",
+    "text": "Running \"vercel build\"",
+    "type": "stdout",
+    "serial": "1783467726304079946407800000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467726094,
+    "date": 1783467726094,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467726094575243674300001",
+    "text": "Restored build cache from previous deployment (78SnPrsomgH4yfHpBHNa5QKU12iL)",
+    "type": "stdout",
+    "serial": "1783467726094575243674300001",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467724691,
+    "date": 1783467724691,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467724691575243674300000",
+    "text": "Downloading 118 deployment files...",
+    "type": "stdout",
+    "serial": "1783467724691575243674300000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467724388,
+    "date": 1783467724388,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467724388575243674300000",
+    "text": "Retrieving list of deployment files...",
+    "type": "stdout",
+    "serial": "1783467724388575243674300000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467724385,
+    "date": 1783467724385,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467724385575243674300000",
+    "text": "Build machine configuration: 2 cores, 8 GB",
+    "type": "stdout",
+    "serial": "1783467724385575243674300000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  },
+  {
+    "created": 1783467724384,
+    "date": 1783467724384,
+    "deploymentId": "dpl_2P6FBXRRx9eLF97rA3SxPHfFtFxm",
+    "id": "1783467724384575243674300000",
+    "text": "Running build in Washington, D.C., USA (East) \u2013 iad1",
+    "type": "stdout",
+    "serial": "1783467724384575243674300000",
+    "info": {
+      "type": "build",
+      "name": "bld_63nromxxq",
+      "entrypoint": "."
+    }
+  }
+]

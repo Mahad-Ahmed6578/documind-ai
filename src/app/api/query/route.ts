@@ -16,7 +16,7 @@ import { answerQuestion } from "@/lib/rag/rag-pipeline";
 import type { ApiResponse, QueryRequest, QueryResponse } from "@/lib/types";
 
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 function generateSessionId(): string {
   return `sess_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
@@ -24,6 +24,7 @@ function generateSessionId(): string {
 
 export async function POST(req: NextRequest) {
   try {
+    const browserSessionId = req.headers.get("x-session-id") || undefined;
     const body = (await req.json()) as Partial<QueryRequest>;
 
     if (!body || typeof body.question !== "string" || !body.question.trim()) {
@@ -35,7 +36,7 @@ export async function POST(req: NextRequest) {
 
     const question = body.question.trim();
     const sessionId = body.sessionId?.trim() || generateSessionId();
-    const topK = Math.min(Math.max(body.topK ?? 4, 1), 10); // clamp 1..10
+    const topK = Math.min(Math.max(body.topK ?? 6, 1), 10); // clamp 1..10
 
     // Validate documentIds (if provided)
     let documentIds: string[] | undefined;
@@ -44,14 +45,16 @@ export async function POST(req: NextRequest) {
         .filter((id): id is string => typeof id === "string" && id.trim().length > 0)
         .map((id) => id.trim());
       if (documentIds.length === 0) {
-        // Empty array = treat as "all documents"
         documentIds = undefined;
       }
     }
 
-    // Sanity check: do we have any documents ready?
+    // Sanity check: do we have any documents ready for this session?
     const readyCount = await db.document.count({
-      where: { status: "ready" },
+      where: {
+        status: "ready",
+        ...(browserSessionId ? { sessionId: browserSessionId } : {}),
+      },
     });
     if (readyCount === 0) {
       return NextResponse.json<ApiResponse<QueryResponse>>(
@@ -80,7 +83,6 @@ export async function POST(req: NextRequest) {
           { status: 409 }
         );
       }
-      // Restrict to valid ones (silently drop invalid IDs)
       documentIds = validDocs.map((d) => d.id);
     }
 

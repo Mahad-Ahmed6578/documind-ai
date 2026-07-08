@@ -27,6 +27,7 @@ datasource db {
 // Stores metadata for every uploaded document
 model Document {
   id         String   @id @default(cuid())
+  sessionId  String?  // browser session ID for per-tab isolation
   filename   String
   fileSize   Int
   mimeType   String
@@ -39,6 +40,7 @@ model Document {
 
   @@index([status])
   @@index([filename])
+  @@index([sessionId])
 }
 
 // Stores each text chunk + its embedding (JSON-serialized Float32 array)

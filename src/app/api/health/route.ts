@@ -51,7 +51,7 @@ export async function GET() {
     status: "ok" | "degraded";
     llmProvider: "zai" | "gemini" | "openrouter";
     llmModel?: string;
-    embedProvider: "tfidf" | "glm4" | "gemini";
+    embedProvider: "tfidf" | "glm4" | "gemini" | "openrouter";
     vectorStoreProvider: "memory" | "pinecone";
     embeddingDim: number;
     geminiKeyConfigured: boolean;

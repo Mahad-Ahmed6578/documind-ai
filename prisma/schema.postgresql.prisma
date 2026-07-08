@@ -17,6 +17,7 @@ datasource db {
 
 model Document {
   id         String   @id @default(cuid())
+  sessionId  String?
   filename   String
   fileSize   Int
   mimeType   String
@@ -29,6 +30,7 @@ model Document {
 
   @@index([status])
   @@index([filename])
+  @@index([sessionId])
 }
 
 model DocumentChunk {
